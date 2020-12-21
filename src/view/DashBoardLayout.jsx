@@ -7,6 +7,7 @@ import {
   NotificationOutlined,
 } from '@ant-design/icons';
 import Logo from '../img/Netflix-Logo.png';
+import HomeContent from './HomeContent';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -16,11 +17,11 @@ const DashBoardLayout = () => {
     <Layout className="app-layout-container">
       <Header style={{ display: 'grid', gridTemplateColumns: '1fr auto' }}>
         <Image preview={false} width={150} height={60} src={Logo} />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
           <Menu.Item key="1">Home</Menu.Item>
           <Menu.Item key="2">Melkhur</Menu.Item>
           <Menu.Item key="3">BlackBoox</Menu.Item>
-          <Menu.Item key="3">Sobre</Menu.Item>
+          <Menu.Item key="4">Sobre</Menu.Item>
         </Menu>
       </Header>
       <Layout>
@@ -60,7 +61,7 @@ const DashBoardLayout = () => {
               minHeight: 280,
             }}
           >
-            Content
+            <HomeContent />
           </Content>
         </Layout>
       </Layout>
