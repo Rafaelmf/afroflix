@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from './view/Login';
-import DashBoardLayout from './view/DashBoardLayout';
+import DashBoardLayout from './layout/DashBoardLayout';
 
 const Routes = () => {
   const PrivateRoute = ({ path, children }) => {
@@ -16,7 +16,7 @@ const Routes = () => {
   };
   return (
     <Switch>
-      <PrivateRoute path="/dashboard">
+      <PrivateRoute>
         <DashBoardLayout />
       </PrivateRoute>
       <Route path="/" component={Login} />

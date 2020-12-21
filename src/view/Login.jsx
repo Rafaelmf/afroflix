@@ -11,7 +11,7 @@ const Login = (props) => {
       <Button
         onClick={() => {
           localStorage.setItem('user-token', 'afasf');
-          history.push('/dashboard');
+          history.push('/home');
         }}
       >
         Login

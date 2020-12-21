@@ -3,7 +3,10 @@ import { Carousel as AntdCarousel, Image } from 'antd';
 
 const Carousel = () => {
   return (
-    <AntdCarousel style={{ marginBottom: '50px' }} autoplay>
+    <AntdCarousel
+      style={{ marginBottom: '50px', backgroundColor: 'white' }}
+      autoplay
+    >
       <div>
         <Image
           preview={false}

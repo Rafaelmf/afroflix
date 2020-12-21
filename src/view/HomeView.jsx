@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from '../components/Carousel';
 import CategoryCards from '../components/CategoryCards';
 
-const HomeContent = () => {
+const HomeView = () => {
   return (
     <div>
       <Carousel />
@@ -13,4 +13,4 @@ const HomeContent = () => {
   );
 };
 
-export default HomeContent;
+export default HomeView;
