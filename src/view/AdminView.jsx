@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PageHeader, Button } from 'antd';
+import { PageHeader } from 'antd';
 import { Route, Switch, withRouter } from 'react-router';
 import UserList from '../components/admin-components/UserList';
 
@@ -12,19 +12,19 @@ const AdminView = (props) => {
     switch (history.location.pathname) {
       case '/members/users':
         settitle('Membros');
-        setsubTitle('/ Lista de Assinantes');
+        setsubTitle('Lista de Assinantes');
         break;
       case '/members/notification':
         settitle('Membros');
-        setsubTitle('/ Notificações');
+        setsubTitle('Notificações');
         break;
       case '/stats/general':
         settitle('Estatísticas');
-        setsubTitle('/ Gerais');
+        setsubTitle('Gerais');
         break;
       case '/stats/film':
         settitle('Estatísticas');
-        setsubTitle('/ Filmes');
+        setsubTitle('Filmes');
         break;
       default:
         break;
@@ -39,12 +39,6 @@ const AdminView = (props) => {
         onBack={() => history.push('/home')}
         title={title}
         subTitle={subTitle}
-        extra={[
-          <Button key="2">Action</Button>,
-          <Button key="1" type="primary">
-            Primary
-          </Button>,
-        ]}
       />
       <Switch>
         <Route path="/members/users" component={UserList} />

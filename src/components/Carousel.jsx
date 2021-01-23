@@ -4,14 +4,17 @@ import { Carousel as AntdCarousel, Image } from 'antd';
 const Carousel = () => {
   return (
     <AntdCarousel
-      style={{ marginBottom: '50px', backgroundColor: 'white' }}
-      autoplay
+      style={{
+        marginBottom: '50px',
+        backgroundColor: 'white',
+        height: '500px',
+      }}
     >
       <div>
         <Image
           preview={false}
           width="100%"
-          height={400}
+          height={500}
           src="https://picsum.photos/1000/300"
         />
       </div>
@@ -19,7 +22,7 @@ const Carousel = () => {
         <Image
           preview={false}
           width="100%"
-          height={400}
+          height={500}
           src="https://picsum.photos/1000/300"
         />
       </div>
@@ -27,7 +30,7 @@ const Carousel = () => {
         <Image
           preview={false}
           width="100%"
-          height={400}
+          height={500}
           src="https://picsum.photos/1000/300"
         />
       </div>
@@ -35,7 +38,7 @@ const Carousel = () => {
         <Image
           preview={false}
           width="100%"
-          height={400}
+          height={500}
           src="https://picsum.photos/1000/300"
         />
       </div>

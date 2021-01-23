@@ -7,10 +7,11 @@ import {
   LaptopOutlined,
   NotificationOutlined,
 } from '@ant-design/icons';
-import Logo from '../img/Netflix-Logo.png';
+import Logo from '../img/BlackFlix-Logo.png';
 import HomeView from '../view/HomeView';
 import AdminView from '../view/AdminView';
 import MelkhurView from '../view/MelkhurView';
+import VideoPlayer from '../view/VideoPlayer';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -49,7 +50,7 @@ const DashBoardLayout = (props) => {
           selectedKeys={selectedMenuKeys}
         >
           <Menu.Item key="1">
-            <Link to="/home">Home</Link>
+            <Link to="/home">Página Inicial</Link>
           </Menu.Item>
           <Menu.Item key="2">
             <Link to="/melkhur">Melkhur</Link>
@@ -106,6 +107,7 @@ const DashBoardLayout = (props) => {
             <Switch>
               <Route exact path="/home" component={HomeView} />
               <Route exact path="/melkhur" component={MelkhurView} />
+              <Route exact path="/video" component={VideoPlayer} />
               <Route component={AdminView} />
             </Switch>
           </Content>
