@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { PageHeader } from 'antd';
 import { Route, Switch, withRouter } from 'react-router';
 import UserList from '../components/admin-components/UserList';
+import MovieList from '../components/admin-components/MoviesList';
 
 const AdminView = (props) => {
   const { history } = props;
@@ -26,6 +27,10 @@ const AdminView = (props) => {
         settitle('Estatísticas');
         setsubTitle('Filmes');
         break;
+      case '/movie/list':
+        settitle('Filmes');
+        setsubTitle('Lista de Filmes');
+        break;
       default:
         break;
     }
@@ -41,7 +46,8 @@ const AdminView = (props) => {
         subTitle={subTitle}
       />
       <Switch>
-        <Route path="/members/users" component={UserList} />
+        <Route exact path="/members/users" component={UserList} />
+        <Route exact path="/movie/list" component={MovieList} />
       </Switch>
     </div>
   );

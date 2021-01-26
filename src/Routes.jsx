@@ -7,19 +7,25 @@ const Routes = () => {
   const PrivateRoute = ({ path, children }) => {
     return (
       <Route
+        exact
         path={path}
         render={() => {
-          return localStorage.getItem('token') ? children : <Redirect to="/" />;
+          return localStorage.getItem('token') ? (
+            children
+          ) : (
+            <Redirect to="/login" />
+          );
         }}
       />
     );
   };
   return (
     <Switch>
+      <Route exact path="/login" component={Login} />
+
       <PrivateRoute>
         <DashBoardLayout />
       </PrivateRoute>
-      <Route path="/" component={Login} />
     </Switch>
   );
 };

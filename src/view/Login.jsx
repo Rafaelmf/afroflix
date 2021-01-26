@@ -10,7 +10,7 @@ const Login = (props) => {
       Login
       <Button
         onClick={() => {
-          localStorage.setItem('user-token', 'afasf');
+          localStorage.setItem('token', 'afasf');
           history.push('/home');
         }}
       >

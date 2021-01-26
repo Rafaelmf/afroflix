@@ -6,6 +6,7 @@ import {
   UserOutlined,
   LaptopOutlined,
   NotificationOutlined,
+  VideoCameraOutlined,
 } from '@ant-design/icons';
 import Logo from '../img/BlackFlix-Logo.png';
 import HomeView from '../view/HomeView';
@@ -36,13 +37,15 @@ const DashBoardLayout = (props) => {
   return (
     <Layout className="app-layout-container">
       <Header style={{ display: 'grid', gridTemplateColumns: '1fr auto' }}>
-        <Image
-          style={{ cursor: 'pointer' }}
-          preview={false}
-          width={160}
-          height={65}
-          src={Logo}
-        />
+        <Link to="/home">
+          <Image
+            style={{ cursor: 'pointer' }}
+            preview={false}
+            width={160}
+            height={65}
+            src={Logo}
+          />
+        </Link>
         <Menu
           theme="dark"
           mode="horizontal"
@@ -75,23 +78,28 @@ const DashBoardLayout = (props) => {
                 <Link to="/members/notification">Notificações</Link>
               </Menu.Item>
             </SubMenu>
-            <SubMenu key="sub2" icon={<LaptopOutlined />} title="Estatisticas">
+            <SubMenu key="sub2" icon={<VideoCameraOutlined />} title="Filmes">
               <Menu.Item key="3">
+                <Link to="/movie/list">Lista de Filmes</Link>
+              </Menu.Item>
+            </SubMenu>
+            <SubMenu key="sub3" icon={<LaptopOutlined />} title="Estatisticas">
+              <Menu.Item key="4">
                 <Link to="/stats/general">Geral</Link>
               </Menu.Item>
-              <Menu.Item key="4">
+              <Menu.Item key="5">
                 <Link to="/stats/film">Filmes</Link>
               </Menu.Item>
             </SubMenu>
             <SubMenu
-              key="sub3"
+              key="sub4"
               icon={<NotificationOutlined />}
               title="Campanhas"
             >
-              <Menu.Item key="/5">Gerenciar Cobranças</Menu.Item>
-              <Menu.Item key="/6">Lançamento de Títulos</Menu.Item>
-              <Menu.Item key="/7">Criar campanha</Menu.Item>
-              <Menu.Item key="/8">Google Calendar</Menu.Item>
+              <Menu.Item key="/6">Gerenciar Cobranças</Menu.Item>
+              <Menu.Item key="/7">Lançamento de Títulos</Menu.Item>
+              <Menu.Item key="/8">Criar campanha</Menu.Item>
+              <Menu.Item key="/9">Google Calendar</Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>
