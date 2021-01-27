@@ -8,7 +8,7 @@ import {
   NotificationOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons';
-import Logo from '../img/BlackFlix-Logo.png';
+import Logo from '../img/Netflix-Logo.png';
 import HomeView from '../view/HomeView';
 import AdminView from '../view/AdminView';
 import MelkhurView from '../view/MelkhurView';
